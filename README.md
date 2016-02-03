@@ -4,7 +4,7 @@ A simple app displaying data from NASA APOD API built with meteor
 ## Installation
 
 * Clone the repository:
-    https://github.com/laudb/spaceApi.git
+..* https://github.com/laudb/spaceApi.git
 
 * Get your API KEY at [NASA's API website](https://api.nasa.gov/index.html#apply-for-an-api-key)
 
