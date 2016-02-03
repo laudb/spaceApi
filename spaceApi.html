@@ -1,0 +1,40 @@
+<head>
+  <title>spaceApi</title>
+</head>
+
+<body align="center">
+  <h1 class="header">Astronomy picture of the day</h1>
+    {{> contentRegion}}
+</body>
+
+<template name="contentRegion">
+  <button class="btn-btn-primary btn-lg">Load Data</button>
+  <br>
+  <br>
+  
+  <div class="contentRegion">
+     <div class="container">
+      <table class="table-bordered" style="width:100%;">
+      <thead>
+        <tr>
+          <th>Author</th>
+          <th>Date</th>
+          <th>Description</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+        <tbody>
+        {{#with viewData}}
+          <tr>
+            <td>{{viewData.copyright}}</td>
+            <td>{{viewData.date}}</td>
+            <td>{{viewData.explanation}}</td>
+            <td><img src="{{viewData.hdurl}}" alt="img" height="auto" width="80%"></td>
+          </tr>
+        {{/with}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>
+
