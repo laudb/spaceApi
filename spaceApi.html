@@ -1,5 +1,6 @@
 <head>
   <title>spaceApi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body align="center">
@@ -13,27 +14,25 @@
   <br>
   
   <div class="contentRegion">
-     <div class="container">
-      <table class="table-bordered" style="width:100%;">
-      <thead>
-        <tr>
-          <th>Author</th>
-          <th>Date</th>
-          <th>Description</th>
-          <th>Image</th>
-        </tr>
-      </thead>
-        <tbody>
-        {{#with viewData}}
-          <tr>
-            <td>{{viewData.copyright}}</td>
-            <td>{{viewData.date}}</td>
-            <td>{{viewData.explanation}}</td>
-            <td><img src="{{viewData.hdurl}}" alt="img" height="auto" width="80%"></td>
-          </tr>
-        {{/with}}
-        </tbody>
-      </table>
+     <div class="container-fluid">
+      {{#with viewData}}
+       <div class="col-lg-4">
+         <h5>Image</h5>
+         <img src="{{viewData.hdurl}}" alt="img" height="auto" width="80%">
+       </div>
+       <div class="col-lg-2">
+         <h5>Author</h5>
+         {{viewData.copyright}}
+       </div>
+       <div class="col-lg-2">
+         <h5>Date</h5>
+         {{viewData.date}}
+       </div>
+       <div class="col-lg-4">
+         <h5>Description</h5>
+         {{viewData.explanation}}
+       </div>
+      {{/with}}
     </div>
   </div>
 </template>

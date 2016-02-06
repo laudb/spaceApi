@@ -8,6 +8,7 @@ if (Meteor.isClient) {
 
   Template.contentRegion.events({
     'click button': function (e,t) {
+      e.preventDefault();
       var id = Meteor.settings.public.nasaApiKey;
       Meteor.call('getData', id, function(e, r){
         if(e){
@@ -29,11 +30,13 @@ if (Meteor.isServer) {
       'getData':function(id){
         console.log('Getting data for ', id);
         var apiUrl = "https://api.nasa.gov/planetary/apod?api_key="+id;
-
         var response = HTTP.get(apiUrl).data;
         return response
-
       }
     });
+
   });
+
 }
+
+
