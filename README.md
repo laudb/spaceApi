@@ -1,5 +1,8 @@
 # spaceApi
-A simple app displaying data from NASA APOD API built with meteor
+A simple app displaying data from NASA APOD API built with meteor 
+
+#### Demo
+* http://spaceapi.meteor.com/
 
 ## Installation
 
