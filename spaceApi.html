@@ -10,11 +10,11 @@
 
 <template name="contentRegion">
   <button class="btn-btn-primary btn-lg">Load Data</button>
-  <br>
-  {{#with viewData}}
-  <p>Picture for: </p><i><h4>{{viewData.date}}</h4></i>
-  {{/with}}
-  <br>
+    <br>
+    {{#with viewData}}
+      <p>Picture for: </p><i><h4>{{viewData.date}}</h4></i>
+    {{/with}}
+    <br>
   
   <div class="contentRegion">
      <div class="container-fluid">
@@ -24,22 +24,6 @@
            <h5><b>Image</b></h5>
            <img src="{{viewData.hdurl}}" alt="img" height="auto" width="80%" style="border: 0.5px solid black">
          </div>
-
-      <!--    <div class="row">
-           <div class="col-lg-6">
-             <div class="well">
-              
-             </div>
-           </div> -->
-
-      <!--      <div class="col-lg-6">
-             <div class="well">
-               <h5><b>Date</b></h5>
-               <i><h4>{{viewData.date}}</h4></i>
-             </div>
-           </div> -->
-
-         <!-- </div> -->
        </div>
 
        <div class="col-lg-4">
