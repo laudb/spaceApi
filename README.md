@@ -12,3 +12,5 @@ A simple app displaying data from NASA APOD API built with meteor
  create a 'public' key-value pair with 'nasaApiKey':'XX...X'
 
 * In your console, run 'meteor --settings=settings.json'
+
+* Check out the live version [here](https://lb-spaceapi.herokuapp.com) 
