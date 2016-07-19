@@ -2,7 +2,7 @@
 A simple app displaying data from NASA APOD API built with meteor
 
 #### Demo
-* http://spaceapi.meteor.com/
+* https://lb-spaceapi.herokuapp.com/
 
 ## Installation
 
