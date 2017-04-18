@@ -15,24 +15,23 @@
     {{#with viewData}}
       <p>Picture for: </p><i><h4>{{viewData.date}}</h4></i>
     {{/with}}
-    <br>
-  
+  <br>
+
   <div class="contentRegion">
      <div class="container-fluid">
       {{#with viewData}}
        <div class="col-lg-8">
-         <div class="well">  
-           <h5><b>Image</b></h5>
-           <img src="{{viewData.hdurl}}" alt="img" height="auto" width="80%" style="border: 0.5px solid black">
+         <div class="well">
+           {{> UI.dynamic template=dataType }}
          </div>
        </div>
 
        <div class="col-lg-4">
          <div class="well">
-         <h5><b>Author</b></h5>
-         <i>{{viewData.copyright}}</i>
-         <h5><b>Description</b></h5>
-         {{viewData.explanation}}
+           <h5><b>Author</b></h5>
+           <i>{{viewData.copyright}}</i>
+           <h5><b>Description</b></h5>
+             {{viewData.explanation}}
          </div>
        </div>
       {{/with}}
@@ -40,3 +39,13 @@
   </div>
 </template>
 
+<template name="pictureTemplate">
+    <h5><b>Image</b></h5>
+    <img src="{{viewData.hdurl}}" alt="img" height="auto" width="80%" style="border: 0.5px solid black">
+</template>
+
+<template name="videoTemplate">
+    <h5><b>Video</b></h5>
+    <iframe width="80%" height="auto" src="{{viewData.url}}" frameborder="0" allowfullscreen>
+    </iframe>
+</template>

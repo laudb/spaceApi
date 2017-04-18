@@ -3,6 +3,11 @@ if (Meteor.isClient) {
   Template.contentRegion.helpers({
     viewData: function () {
       return Session.get('apiData');
+    },
+    dataType: function () {
+      var mediaType = Session.get('apiData').media_type;
+      var templateName  = mediaType+'Template';
+      return templateName
     }
   });
 
@@ -34,9 +39,5 @@ if (Meteor.isServer) {
         return response
       }
     });
-
   });
-
 }
-
-
